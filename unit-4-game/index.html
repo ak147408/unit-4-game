@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>simple crystal game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-ae362vOLHy2F1EfJtpMbNW0i9pNM1TP2l5O4VGYYiLJKsaejqVWibbP6BSf0UU5i"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Crystal Collector!</h1>
+            <p>You will be given a random number at the begining of this game.</p>
+            <p>There are 4 crystals below. By clicking on a crystal you will add a specific ammount of points to your total
+                score.</p>
+            <p>You win the game by matching your total score to random number, you lose the game if your total score goes above
+                random number.</p>
+            <p> The value of each crystal is hidden from you until you click on it. </p>
+            <p>Each time the game starts, the game will change the values of each crystal.</p>
+        </div>
+    </div>
+    <div class="row cards">
+        <div class="col-4">
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Number to Guess:</div>
+                <div class="card-body">
+                    <h5 class="card-title" id="number-to-guess"></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header" id="result"></div>
+                <div class="card-body">
+                    <h5 class="card-title">Wins:
+                        <span id="wins"></span>
+                    </h5>
+                    <h5 class="card-title">Losses:
+                        <span id="losses"></span>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Your Current Number Is: </div>
+                <div class="card-body">
+                    <h5 class="card-title" id="current-score"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row cards">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container" id="crystals">
+                </div>
+            </nav>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
